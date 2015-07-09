@@ -86,7 +86,8 @@ static void hapn48_demod(struct demod_state *s, buffer_t buffer, int length)
 		if (s->l1.hapn48.sphase >= 0x10000) {
 			s->l1.hapn48.sphase &= 0xffff;
 			curbit = ((s->l1.hapn48.shreg >> 4) ^ s->l1.hapn48.shreg ^ 1) & 1;
-			verbprintf(9, " %c ", '0'+curbit);
+			//verbprintf(9, " %c ", '0'+curbit);
+			//printf("%c", '0' + curbit);
 			hdlc_rxbit(s, curbit);
 		}
 	}
