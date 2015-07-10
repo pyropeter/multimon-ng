@@ -356,10 +356,10 @@ void hdlc_init(struct demod_state *s)
 		255, // snaplen
 		150 // data link type (madeup, private range)
 	};
-	//if (fwrite(header, 4, 6, stdout) != 6) {
-	//	fprintf(stderr, "\nfwrite failed!\n");
-	//	exit(EXIT_FAILURE);
-	//}
+	if (fwrite(header, 4, 6, stdout) != 6) {
+		fprintf(stderr, "\nfwrite failed!\n");
+		exit(EXIT_FAILURE);
+	}
 
 }
 
