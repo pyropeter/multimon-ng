@@ -152,7 +152,7 @@ static void ax25_disp_packet(struct demod_state *s, unsigned char *bp, unsigned 
 
 #if 1
 	if (!check_crc_ccitt(bp, len)) {
-		fprintf(stderr, "FCS check failed!\n");
+		fprintf(stderr, "X");
 		return;
 	}
 	fprintf(stderr, ".");
